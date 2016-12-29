@@ -1,0 +1,10 @@
+import fbchat          #we can install this module using- sudo pip install fbchat 
+from getpass import getpass      #this is to get the password, generally pre-installed
+username = str(raw_input("user: "))
+client = fbchat.Client(username, getpass())
+friends = client.getUsers("friend's name")  
+friend = friends[0]
+message = str(raw_input("message: "))
+sent = client.send(friend.uid, message)
+if sent:
+        print("message sent!")
