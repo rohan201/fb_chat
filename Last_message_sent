@@ -1,0 +1,5 @@
+last_message_seen = client.getThreadInfo(friend.uid,0)
+last_message_seen.reverse() 
+
+for message in last_message_seen:
+    print(message.body)
